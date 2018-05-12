@@ -1,0 +1,10 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+
+GET     /                           controllers.HomeController.homepage
+POST    /schema/:SCHEMAID                    controllers.HomeController.postSchema(SCHEMAID:String)
+#Upload a JSON Schema with unique 'SCHEMAID'
+GET     /schema/:SCHEMAID          controllers.HomeController.getSchema(SCHEMAID:String)
+#Get a JSON Schema with unique 'SCHEMAID'
+POST    /validate/:SCHEMAID     controllers.HomeController.validate(SCHEMAID:String)
+#Validate a JSON doc with a schema
